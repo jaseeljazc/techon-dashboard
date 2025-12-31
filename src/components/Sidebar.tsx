@@ -16,10 +16,6 @@ import {
 import { GoHomeFill } from "react-icons/go";
 import { LogOut } from "lucide-react";
 
-/* ======================================
-   NavItem Component
-====================================== */
-
 interface NavItemProps {
   icon: React.ReactNode;
   isActive?: boolean;
@@ -28,14 +24,14 @@ interface NavItemProps {
 const NavItem = ({ icon, isActive = false }: NavItemProps) => (
   <button
     className={`w-12 h-12 rounded-2xl    flex items-center justify-center transition-all duration-200 ${
-      isActive ? "bg-[#D2F561] shadow-lg" : "bg-white hover:bg-muted shadow-card"
+      isActive
+        ? "bg-[#D2F561] shadow-lg"
+        : "bg-white hover:bg-muted shadow-card"
     }`}
   >
     {icon}
   </button>
 );
-
-
 
 const Sidebar = () => {
   return (
@@ -99,7 +95,9 @@ const Sidebar = () => {
 
       {/* Bottom Navigation */}
       <div className="flex flex-col gap-3 bg-white/60 rounded-2xl  shadow-card mt-20">
-        <NavItem icon={<LogOut className="w-5 h-5 object-contain bg-white" />} />
+        <NavItem
+          icon={<LogOut className="w-5 h-5 object-contain bg-white" />}
+        />
         {/* Profile Avatar */}
         <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
           <img

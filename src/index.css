@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
 
 @layer base {
   :root {
@@ -52,45 +52,6 @@
     --sidebar-accent: 220 20% 96%;
     --sidebar-accent-foreground: 222 47% 11%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 75 100% 50%;
-  }
-
-  .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
-
-    --card: 222 47% 14%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222 47% 14%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 75 100% 50%;
-    --primary-foreground: 222 47% 11%;
-
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 224 76% 56%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 75 100% 50%;
-
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 75 100% 50%;
-    --sidebar-primary-foreground: 222 47% 11%;
-    --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 17%;
     --sidebar-ring: 75 100% 50%;
   }
 }
@@ -150,4 +111,33 @@
       rgba(115, 115, 115, 0) 90.7%,
       transparent 15.7%
     );
+}
+
+@media (max-width: 768px) {
+  .dashboard-radial-glow {
+    background:
+      /* Light green */ radial-gradient(
+        circle at 55% 55%,
+        rgba(205, 229, 107, 0.32) 0%,
+        transparent 20%
+      ),
+      /* Yellow (#FCD53F94) */
+        radial-gradient(
+          circle at 10% 30%,
+          rgba(252, 213, 63, 0.38) 0%,
+          transparent 10%
+        ),
+      /* Red (#FF000033) */
+        radial-gradient(
+          circle at 95% 35%,
+          rgba(255, 0, 0, 0.1) 0%,
+          transparent 15%
+        ),
+      /* Purple (#4D046D59) */
+        radial-gradient(
+          ellipse 70% 70% at 70% 40%,
+          rgba(77, 4, 109, 0.15) 0%,
+          transparent 55%
+        );
+  }
 }

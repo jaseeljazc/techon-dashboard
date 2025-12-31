@@ -43,21 +43,12 @@ const ThisMonthExpiresTable = () => {
 
       {/* MOBILE EMPTY STATE */}
       <div className="flex lg:hidden flex-col items-center justify-center py-10">
-        <img
-          src={boxIcon}
-          alt="No data"
-          className="w-20 h-20 opacity-20"
-        />
-        
+        <img src={boxIcon} alt="No data" className="w-20 h-20 opacity-20" />
       </div>
 
       {/* DESKTOP EMPTY STATE */}
       <div className="hidden lg:flex flex-col items-center justify-center py-12">
-        <img
-          src={boxIcon}
-          alt="No data"
-          className="w-32 h-32 opacity-20"
-        />
+        <img src={boxIcon} alt="No data" className="w-32 h-32 opacity-20" />
       </div>
     </div>
   );

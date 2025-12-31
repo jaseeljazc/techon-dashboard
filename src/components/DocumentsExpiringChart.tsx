@@ -66,7 +66,6 @@ const DocumentsExpiringChart = () => {
             {/* Y Axis */}
             <YAxis hide domain={[0, MAX_VALUE]} />
 
-            {/* ✅ Properly constrained reference line */}
             <ReferenceLine
               y={MAX_VALUE}
               stroke="#4B66E3"

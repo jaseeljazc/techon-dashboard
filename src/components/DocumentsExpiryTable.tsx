@@ -17,12 +17,12 @@ const DocumentsExpiryTable = () => {
       </div>
 
       {/* Table Header */}
-      <div className="border-b border-black pb-3 pr-5">
+      <div className="border-b border-black pb-1 sm:pb-3 pr-5">
         <div className="flex justify-between">
           {columns.map((col, index) => (
             <span
               key={index}
-              className="text-xs font-bold text-muted-foreground"
+              className="text-[10px] font-bold text-muted-foreground"
             >
               {col}
             </span>
